@@ -146,7 +146,7 @@ class SubjectDetailsSt extends StatelessWidget {
             iconColor: Colors.white,
             collapsedIconColor: Colors.white70,
             children: [
-              Padding(
+              Padding(  
                 padding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 child: Column(
