@@ -6,20 +6,16 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(
-          margin: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              _header(context),
-              _inputField(context),
-              _forgotPassword(context),
-              _signup(context),
-            ],
-          ),
+    return Scaffold(
+      body: Container(
+        margin: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _header(context),
+            _inputField(context),
+            _signup(context),
+          ],
         ),
       ),
     );
@@ -65,18 +61,19 @@ class LoginPage extends StatelessWidget {
           ),
           obscureText: true,
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 5),
+        _forgotPassword(context),
+        SizedBox(height: 20,),
         ElevatedButton(
           onPressed: () {
           },
           style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),
             padding: const EdgeInsets.symmetric(vertical: 16),
-            backgroundColor: Colors.purple,
           ),
           child: const Text(
             "Login",
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 16),
           ),
         )
       ],
@@ -86,9 +83,14 @@ class LoginPage extends StatelessWidget {
   _forgotPassword(context) {
     return TextButton(
       onPressed: () {},
-      child: const Text("Forgot password?",
-        style: TextStyle(color: Colors.purple),
-      ),
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Text("Forgot password?",
+            style: TextStyle(color: Colors.purple),
+          ),
+        ],
+      )
     );
   }
 
