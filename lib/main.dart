@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       appBarTheme: AppBarTheme(
-        backgroundColor: Color(0xFF1F1F1F),
+        backgroundColor: Color(0xFF121212),
         foregroundColor: Colors.white,
         elevation: 0,
       ),
@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       theme: darkTheme,
-      home: const LoginPage(),
+      home: const Subjects(),
     );
   }
 }

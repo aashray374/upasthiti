@@ -12,8 +12,58 @@ class _SubjectsState extends State<Subjects> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(itemCount: 7, itemBuilder: (context,index){
-        return SubjectCard(subjectName: "Hello",);
+      appBar: AppBar(
+        actions: [
+          PopupMenuButton<String>(
+            icon: Icon(Icons.more_vert), // The three dots icon
+            onSelected: (value) {
+              // Handle menu action here
+              if (value == 'edit') {
+                print('Edit tapped');
+              } else if (value == 'delete') {
+                print('Delete tapped');
+              }
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+              PopupMenuItem<String>(
+                value: 'import',
+                child: Text('Import Subjects'),
+              ),
+              PopupMenuItem<String>(
+                value: 'export',
+                child: Text('Export Timetable'),
+              ),
+            ],
+          )
+        ],
+      ),
+      body : Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 20,),
+          _header(context),
+          SizedBox(height: 40,),
+          _displaySubjects(context),
+        ],
+      ),
+    );
+  }
+
+  _header(context){
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Text(
+        "Your Subjects",
+        style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+
+  _displaySubjects(context){
+    return Expanded(
+      child: ListView.builder(itemCount: 7, itemBuilder: (context,index){
+        return SubjectCard(subjectName: "hello",);
       }),
     );
   }
