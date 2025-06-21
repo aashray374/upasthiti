@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:upasthiti/screens/login.dart';
+import 'package:upasthiti/screens/subject_details_st.dart';
 import 'package:upasthiti/screens/subjects.dart';
 
 void main() {
@@ -63,7 +64,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       theme: darkTheme,
-      home: const Subjects(),
+      home: const SubjectDetailsSt(),
     );
   }
 }
