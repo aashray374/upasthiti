@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:upasthiti/screens/login.dart';
+import 'package:upasthiti/screens/signup.dart';
+import 'package:upasthiti/screens/student_home.dart';
 import 'package:upasthiti/screens/subject_details_st.dart';
 import 'package:upasthiti/screens/subjects.dart';
 import 'package:upasthiti/screens/upcoming_classes.dart';
@@ -65,7 +67,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       theme: darkTheme,
-      home: const AllClassesScreen(),
+      home: const SignupPage(),
     );
   }
 }
