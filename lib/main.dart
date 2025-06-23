@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       theme: darkTheme,
-      home: const SignupPage(),
+      home: const SubjectDetailsSt(),
     );
   }
 }

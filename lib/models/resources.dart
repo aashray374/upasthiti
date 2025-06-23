@@ -20,4 +20,12 @@ class Resource {
     url: json['url'],
     uploadedAt: DateTime.parse(json['uploaded_at']),
   );
+
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'subject_id': subjectId,
+    'name': name,
+    'url': url,
+    'uploaded_at': uploadedAt.toIso8601String(),
+  };
 }

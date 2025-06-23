@@ -1,7 +1,7 @@
 class ClassModel {
   final int id;
   final int subjectId;
-  final String type; 
+  final String type;
   final String? day;
   final DateTime? date;
   final String startTime;
@@ -26,4 +26,14 @@ class ClassModel {
     startTime: json['start_time'],
     endTime: json['end_time'],
   );
+
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'subject_id': subjectId,
+    'type': type,
+    'day': day,
+    'date': date?.toIso8601String(),
+    'start_time': startTime,
+    'end_time': endTime,
+  };
 }

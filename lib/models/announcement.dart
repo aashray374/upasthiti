@@ -20,4 +20,12 @@ class Announcement {
     message: json['message'],
     date: DateTime.parse(json['date']),
   );
+
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'subject_id': subjectId,
+    'title': title,
+    'message': message,
+    'date': date.toIso8601String(),
+  };
 }
